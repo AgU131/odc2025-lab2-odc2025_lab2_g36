@@ -224,6 +224,37 @@ movz w10, 0xA520, lsl 0    // color
 movk w10, 0x00DA, lsl 16
 bl rectangulo
 
+//------- NUBES ----------
+// x1 = ancho
+// x2 = alto 
+// x3, x4 = x , y
+
+
+
+movz x1, 60, lsl 0
+movz x2, 10, lsl 0
+movz x3, 150,lsl 0
+movz x4, 42, lsl 0
+movz w10, 0xD0D0, lsl 0    // Mueve los 16 bits bajos
+movk w10, 0x00D0, lsl 16   // Mueve los 8 bits altos (rellena los bits 16–23)
+bl rectangulo
+
+movz x1, 40, lsl 0
+movz x2, 7, lsl 0
+movz x3, 160,lsl 0
+movz x4, 35, lsl 0
+movz w10, 0xD0D0, lsl 0    // Mueve los 16 bits bajos
+movk w10, 0x00D0, lsl 16   // Mueve los 8 bits altos (rellena los bits 16–23)
+bl rectangulo
+
+movz x1, 15, lsl 0
+movz x2, 8, lsl 0
+movz x3, 170,lsl 0
+movz x4, 30, lsl 0
+movz w10, 0xD0D0, lsl 0    // Mueve los 16 bits bajos
+movk w10, 0x00D0, lsl 16   // Mueve los 8 bits altos (rellena los bits 16–23)
+bl rectangulo
+
 	//---------------------------------------------------------------
 	// Infinite Loop
 
