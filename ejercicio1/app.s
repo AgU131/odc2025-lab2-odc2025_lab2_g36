@@ -57,41 +57,172 @@ movz x4, 0, lsl 0          // y inicial
 movz w10, 0xFFFF, lsl 0    // color cielo
 bl rectangulo              // llama a la función
 
-// --------- PASTO VERDE --
-movz x1, 640, lsl 0        // ancho
-movz x2, 80, lsl 0         // altura
+// --------- PASTO VERDE CLARO --
+movz x1, 640, lsl 0        // ancho 
+movz x2, 80, lsl 0         // altura         
 movz x3, 0, lsl 0          // x inicial
 movz x4, 400, lsl 0        // y inicial
 movz w10, 0xFF00, lsl 0    // color
 bl rectangulo
 
-// ---------- COLOR GRIS -- (lo guardamos ahora porque lo vamos a repetir durante un ratito)
-movz w10, 0xAAAA, lsl 0
-movk w10, 0x00AA, lsl 16
 
-// ---------- PODIO -- 
-movz x1, 70, lsl 0       // ancho
-movz x2, 35, lsl 0       // alto
-movz x3, 200, lsl 0      // x
-movz x4, 360, lsl 0      // y
+// --------- PASTO VERDE MEDIO --
+movz x1, 640, lsl 0        // ancho
+movz x2, 40, lsl 0         // altura
+movz x3, 0, lsl 0          // x inicial
+movz x4, 420, lsl 0        // y inicial
+movz w10, 0x8000, lsl 0    // color
 bl rectangulo
 
-// ---------- PODIO MAS ALTO --
-movz x1, 250, lsl 0
-movz x2, 100, lsl 0
-movz x3, 193, lsl 0
-movz x4, 300, lsl 0
+// --------- PASTO VERDE MEDIO --
+movz x1, 50, lsl 0        // ancho
+movz x2, 10, lsl 0         // altura
+movz x3, 0, lsl 0          // x inicial
+movz x4, 410, lsl 0        // y inicial
+movz w10, 0x8000, lsl 0    // color
 bl rectangulo
 
-// ---------- PODIO --
-movz x1, 120, lsl 0
-movz x2, 30, lsl 0
-movz x3, 440, lsl 0
-movz x4, 440, lsl 0
+// --------- PASTO VERDE MEDIO --
+movz x1, 53, lsl 0        // ancho
+movz x2, 5, lsl 0         // altura
+movz x3, 0, lsl 0          // x inicial
+movz x4, 415, lsl 0        // y inicial
+movz w10, 0x8000, lsl 0    // color
 bl rectangulo
 
-        
+// --------- PASTO VERDE MEDIO --
+movz x1, 44, lsl 0        // ancho
+movz x2, 5, lsl 0         // altura
+movz x3, 0, lsl 0          // x inicial
+movz x4, 405, lsl 0        // y inicial
+movz w10, 0x8000, lsl 0    // color
+bl rectangulo
 
+// --------- PASTO VERDE OSCURO --
+movz x1, 640, lsl 0        // ancho
+movz x2, 30, lsl 0         // altura
+movz x3, 0, lsl 0          // x inicial
+movz x4, 450, lsl 0        // y inicial
+movz w10, 0x6000, lsl 0    // color
+bl rectangulo
+
+// --------- PASTO VERDE -- (verde claro del medio)
+movz x1, 340, lsl 0        // ancho
+movz x2, 15, lsl 0         // altura
+movz x3, 150, lsl 0          // x inicial
+movz x4, 420, lsl 0        // y inicial
+movz w10, 0xFF00, lsl 0    // color
+bl rectangulo
+
+// --------- PASTO VERDE --(verde claro del medio)
+movz x1, 5, lsl 0        // ancho
+movz x2, 5, lsl 0         // altura
+movz x3, 145, lsl 0          // x inicial
+movz x4, 420, lsl 0        // y inicial
+movz w10, 0xFF00, lsl 0    // color
+bl rectangulo
+
+// --------- PASTO VERDE --(verde claro del medio)
+movz x1, 5, lsl 0        // ancho
+movz x2, 5, lsl 0         // altura
+movz x3, 490, lsl 0          // x inicial
+movz x4, 420, lsl 0        // y inicial
+movz w10, 0xFF00, lsl 0    // color
+bl rectangulo
+
+// --------- PASTO VERDE OSCURO --
+movz x1, 50, lsl 0        // ancho
+movz x2, 20, lsl 0         // altura
+movz x3, 0, lsl 0          // x inicial
+movz x4, 440, lsl 0        // y inicial
+movz w10, 0x6000, lsl 0    // color
+bl rectangulo
+
+// --------- PASTO VERDE OSCURO --
+movz x1, 25, lsl 0        // ancho
+movz x2, 10, lsl 0         // altura
+movz x3, 0, lsl 0          // x inicial
+movz x4, 430, lsl 0        // y inicial
+movz w10, 0x6000, lsl 0    // color
+bl rectangulo
+
+// --------- PASTO VERDE OSCURO --
+movz x1, 50, lsl 0        // ancho
+movz x2, 20, lsl 0         // altura
+movz x3, 590, lsl 0          // x inicial
+movz x4, 440, lsl 0        // y inicial
+movz w10, 0x6000, lsl 0    // color
+bl rectangulo
+
+// --------- PASTO VERDE OSCURO --
+movz x1, 25, lsl 0        // ancho
+movz x2, 10, lsl 0         // altura
+movz x3, 615, lsl 0          // x inicial
+movz x4, 430, lsl 0        // y inicial
+movz w10, 0x6000, lsl 0    // color
+bl rectangulo
+
+// --------- PASTO VERDE MEDIO--
+movz x1, 50, lsl 0        // ancho
+movz x2, 10, lsl 0         // altura
+movz x3, 590, lsl 0          // x inicial
+movz x4, 410, lsl 0        // y inicial
+movz w10, 0x8000, lsl 0    // color
+bl rectangulo
+
+// --------- PASTO VERDE MEDIO --
+movz x1, 53, lsl 0        // ancho
+movz x2, 5, lsl 0         // altura
+movz x3, 587, lsl 0          // x inicial
+movz x4, 415, lsl 0        // y inicial
+movz w10, 0x8000, lsl 0    // color
+bl rectangulo
+
+// --------- PASTO VERDE MEDIO --
+movz x1, 44, lsl 0        // ancho
+movz x2, 5, lsl 0         // altura
+movz x3, 596, lsl 0          // x inicial
+movz x4, 405, lsl 0        // y inicial
+movz w10, 0x8000, lsl 0    // color
+bl rectangulo
+
+// -------PODIO --
+
+bl dibujar_podio
+
+// ------- BANDERA --
+movz x1, 8, lsl 0        // ancho
+movz x2, 135, lsl 0         // altura
+movz x3, 250, lsl 0          // x inicial
+movz x4, 180, lsl 0        // y inicial
+movz w10, 0x4513, lsl 0    // color
+movk w10, 0x008B, lsl 16    // color
+bl rectangulo
+
+// ------- COPA --
+movz x1, 30, lsl 0        // ancho
+movz x2, 5, lsl 0         // altura
+movz x3, 300, lsl 0          // x inicial
+movz x4, 311, lsl 0        // y inicial
+movz w10, 0xA520, lsl 0    // color
+movk w10, 0x00DA, lsl 16
+bl rectangulo
+
+movz x1, 26, lsl 0        // ancho
+movz x2, 5, lsl 0         // altura
+movz x3, 302, lsl 0          // x inicial
+movz x4, 307, lsl 0        // y inicial
+movz w10, 0xA520, lsl 0    // color
+movk w10, 0x00DA, lsl 16
+bl rectangulo
+
+movz x1, 22, lsl 0        // ancho
+movz x2, 4, lsl 0         // altura
+movz x3, 304, lsl 0          // x inicial
+movz x4, 303, lsl 0        // y inicial
+movz w10, 0xA520, lsl 0    // color
+movk w10, 0x00DA, lsl 16
+bl rectangulo
 
 	//---------------------------------------------------------------
 	// Infinite Loop

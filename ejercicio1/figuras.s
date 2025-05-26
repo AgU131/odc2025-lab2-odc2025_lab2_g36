@@ -62,4 +62,40 @@ rectangulo:
     LDR x30, [SP, 32]
     ADD SP, SP, 40
     ret
-         
+        
+
+dibujar_podio:
+
+sub sp, sp, 8
+stur x30, [sp, 0]
+
+// ---------- SOMBRA --
+movz x1, 7, lsl 0       // ancho
+movz x2, 95, lsl 0       // alto
+movz x3, 243, lsl 0      // x
+movz x4, 315, lsl 0      // y
+movz w10, 0x5050, lsl 0
+movk w10, 0x0050, lsl 16
+bl rectangulo
+
+// ---------- PODIO --
+movz x1, 75, lsl 0       // ancho
+movz x2, 60, lsl 0       // alto
+movz x3, 170, lsl 0      // x
+movz x4, 350, lsl 0      // y
+movz w10, 0xAAAA, lsl 0
+movk w10, 0x00AA, lsl 16
+bl rectangulo
+
+// ---------- PODIO --
+movz x1, 125, lsl 0       // ancho
+movz x2, 95, lsl 0       // alto
+movz x3, 250, lsl 0      // x
+movz x4, 315, lsl 0      // y
+movz w10, 0xAAAA, lsl 0
+movk w10, 0x00AA, lsl 16
+bl rectangulo 
+
+ldr x30, [sp, 0]
+add sp, sp, 8
+ret
