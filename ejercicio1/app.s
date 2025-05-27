@@ -190,7 +190,7 @@ bl rectangulo
 
 bl dibujar_podio
 
-// ------- BANDERA --
+// ------- PALO --
 movz x1, 8, lsl 0        // ancho
 movz x2, 135, lsl 0         // altura
 movz x3, 250, lsl 0          // x inicial
@@ -198,6 +198,33 @@ movz x4, 180, lsl 0        // y inicial
 movz w10, 0x4513, lsl 0    // color
 movk w10, 0x008B, lsl 16    // color
 bl rectangulo
+//--------- BANDERA ARG -----------
+
+movz x1, 100, lsl 0
+movz x2, 45, lsl 0
+movz x3, 258,lsl 0
+movz x4, 185,lsl 0
+MOVZ w10, 0xC3F7, lsl 0           // bits 0–15
+MOVK w10, 0x004F, lsl 16  // bits 16–23
+bl rectangulo
+
+movz x1, 100,lsl 0
+movz x2, 15, lsl 0
+movz x3, 258,lsl 0
+movz x4, 200,lsl 0
+movz w10, 0xFFFF, lsl 0           // bits 0–15
+movk w10, 0x00FF, lsl 16  // bits 16–23
+bl rectangulo
+
+movz x1, 9,lsl 0
+movz x2, 9,lsl 0
+movz x3, 302,lsl 0
+movz x4, 203,lsl 0
+MOVZ w10, 0xFF99, lsl 0           // bits 0–15
+MOVK w10, 0x00FF, lsl 16  // bits 16–23
+bl rectangulo
+
+
 
 // ------- COPA --
 movz x1, 30, lsl 0        // ancho
