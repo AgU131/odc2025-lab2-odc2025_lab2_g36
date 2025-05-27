@@ -255,6 +255,109 @@ movz w10, 0xD0D0, lsl 0    // Mueve los 16 bits bajos
 movk w10, 0x00D0, lsl 16   // Mueve los 8 bits altos (rellena los bits 16–23)
 bl rectangulo
 
+
+//NUBE 2: (desplazado a la derecha en el eje x + 100px, y el eje y + 50px)
+movz x1, 60, lsl 0
+movz x2, 10, lsl 0
+movz x3, 250, lsl 0
+movz x4, 92, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+movz x1, 40, lsl 0
+movz x2, 7, lsl 0
+movz x3, 260, lsl 0
+movz x4, 85, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+movz x1, 20, lsl 0
+movz x2, 6, lsl 0
+movz x3, 270, lsl 0
+movz x4, 80, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+
+//NUBE 3: (desplazado a la derecha en el eje x + 250px)
+movz x1, 60, lsl 0
+movz x2, 10, lsl 0
+movz x3, 400, lsl 0
+movz x4, 42, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+movz x1, 40, lsl 0
+movz x2, 7, lsl 0
+movz x3, 410, lsl 0
+movz x4, 35, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+movz x1, 20, lsl 0
+movz x2, 6, lsl 0
+movz x3, 420, lsl 0
+movz x4, 30, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+
+//NUBE extremos Izquierdo: (desplazado a la derecha en el eje x + 100px, y el eje y + 50px)
+movz x1, 60, lsl 0
+movz x2, 10, lsl 0
+movz x3, 50, lsl 0
+movz x4, 92, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+movz x1, 40, lsl 0
+movz x2, 7, lsl 0
+movz x3, 60, lsl 0
+movz x4, 85, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+movz x1, 20, lsl 0
+movz x2, 6, lsl 0
+movz x3, 70, lsl 0
+movz x4, 80, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+//NUBE extremo Derecho: (desplazado a la derecha en el eje x + 100px, y el eje y + 50px)
+movz x1, 60, lsl 0
+movz x2, 10, lsl 0
+movz x3, 500, lsl 0
+movz x4, 92, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+movz x1, 40, lsl 0
+movz x2, 7, lsl 0
+movz x3, 510, lsl 0
+movz x4, 85, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+movz x1, 20, lsl 0
+movz x2, 6, lsl 0
+movz x3, 520, lsl 0
+movz x4, 80, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
 	//---------------------------------------------------------------
 	// Infinite Loop
 
