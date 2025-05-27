@@ -198,6 +198,17 @@ movz x4, 180, lsl 0        // y inicial
 movz w10, 0x4513, lsl 0    // color
 movk w10, 0x008B, lsl 16    // color
 bl rectangulo
+
+//-------PALO IZQUIERDA-------
+movz x1, 8, lsl 0        // ancho
+movz x2, 135, lsl 0         // altura
+movz x3, 177, lsl 0          // x inicial
+movz x4, 215, lsl 0        // y inicial
+movz w10, 0x4513, lsl 0    // color
+movk w10, 0x008B, lsl 16    // color
+bl rectangulo
+
+
 //--------- BANDERA ARG -----------
 
 movz x1, 100, lsl 0
