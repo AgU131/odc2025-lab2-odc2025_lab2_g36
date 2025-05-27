@@ -385,6 +385,60 @@ movz w10, 0xD0D0, lsl 0
 movk w10, 0x00D0, lsl 16
 bl rectangulo
 
+//NUBES ABAJO DERECHA
+
+movz x1, 60, lsl 0
+movz x2, 10, lsl 0
+movz x3, 145,lsl 0
+movz x4, 185, lsl 0
+movz w10, 0xD0D0, lsl 0    // Mueve los 16 bits bajos
+movk w10, 0x00D0, lsl 16   // Mueve los 8 bits altos (rellena los bits 16–23)
+bl rectangulo
+
+movz x1, 40, lsl 0
+movz x2, 7, lsl 0
+movz x3, 155, lsl 0
+movz x4, 178, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+movz x1, 20, lsl 0
+movz x2, 6, lsl 0
+movz x3, 165, lsl 0
+movz x4, 172, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+
+//NUBE ABAJO IZQUIERDA
+
+movz x1, 60, lsl 0
+movz x2, 10, lsl 0
+movz x3, 450,lsl 0
+movz x4, 210, lsl 0
+movz w10, 0xD0D0, lsl 0    // Mueve los 16 bits bajos
+movk w10, 0x00D0, lsl 16   // Mueve los 8 bits altos (rellena los bits 16–23)
+bl rectangulo
+
+movz x1, 40, lsl 0
+movz x2, 7, lsl 0
+movz x3, 460, lsl 0
+movz x4, 203, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+movz x1, 20, lsl 0
+movz x2, 6, lsl 0
+movz x3, 470, lsl 0
+movz x4, 197, lsl 0
+movz w10, 0xD0D0, lsl 0
+movk w10, 0x00D0, lsl 16
+bl rectangulo
+
+
 	//---------------------------------------------------------------
 	// Infinite Loop
 
