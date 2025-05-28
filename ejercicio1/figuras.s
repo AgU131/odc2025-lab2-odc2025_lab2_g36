@@ -99,3 +99,132 @@ bl rectangulo
 ldr x30, [sp, 0]
 add sp, sp, 8
 ret
+
+dibujar_copa:
+
+//usamos x15 y x16 como posicion inicial para la copa, y luego usamos los add y sub para ir moviendonos entro los rectangulos de la copa y dibujar nuevos
+sub sp, sp, 8
+stur x30, [sp, 0]
+
+    // --- Centro Nivel 1 ---
+    movz x1, 30, lsl 0
+    movz x2, 30, lsl 0
+    mov x3, x15
+    mov x4, x16
+    movz w10, 0xA520, lsl 0
+    movk w10, 0x00DA, lsl 16
+    bl rectangulo
+
+    // --- Centro Nivel 2 ---
+    movz x1, 22, lsl 0
+    movz x2, 38, lsl 0
+    add x3, x15, #4
+    sub x4, x16, #3
+    bl rectangulo
+
+    // --- Centro Nivel 3 ---
+    movz x1, 38, lsl 0
+    movz x2, 20, lsl 0
+    sub x3, x15, #4
+    add x4, x16, #5
+    bl rectangulo
+
+    // --- Brillo ---
+    movz x1, 6, lsl 0
+    movz x2, 4, lsl 0
+    add x3, x15, #22
+    add x4, x16, #7
+    movz w10, 0xE680, lsl 0
+    movk w10, 0x00FF, lsl 16
+    bl rectangulo
+
+    // --- Centro más fino ---
+    movz x1, 14, lsl 0
+    movz x2, 16, lsl 0
+    add x3, x15, #8
+    add x4, x16, #26
+    movz w10, 0xA520, lsl 0
+    movk w10, 0x00DA, lsl 16
+    bl rectangulo
+
+    // --- Tronco fino ---
+    movz x1, 10, lsl 0
+    movz x2, 70, lsl 0
+    add x3, x15, #10
+    mov x4, x16
+    bl rectangulo
+
+    // --- Tronco base ---
+    movz x1, 18, lsl 0
+    movz x2, 8, lsl 0
+    add x3, x15, #6
+    add x4, x16, #55
+    bl rectangulo
+
+    // --- Base verde arriba ---
+    movz x1, 24, lsl 0
+    movz x2, 4, lsl 0
+    add x3, x15, #3
+    add x4, x16, #63
+    movz w10, 0x5000, lsl 0
+    movk w10, 0x0000, lsl 16
+    bl rectangulo
+
+    // --- Base medio ---
+    movz x1, 28, lsl 0
+    movz x2, 4, lsl 0
+    add x3, x15, #1
+    add x4, x16, #67
+    movz w10, 0xA520, lsl 0
+    movk w10, 0x00DA, lsl 16
+    bl rectangulo
+
+    // --- Base abajo ---
+    movz x1, 32, lsl 0
+    movz x2, 5, lsl 0
+    sub x3, x15, #1
+    add x4, x16, #71
+    movz w10, 0x5000, lsl 0
+    movk w10, 0x0000, lsl 16
+    bl rectangulo
+
+ldr x30, [sp, 0]
+add sp, sp, 8
+
+    ret
+
+
+dibujar_nube:
+
+        sub sp, sp, 8
+        stur x30, [sp, 0]
+	// Dibuja una nube en la posición (x15, x16)
+
+	mov x1, 60
+	mov x2, 10
+	mov x3, x15
+	mov x4, x16
+	movz w10, 0xD0D0, lsl 0
+	movk w10, 0x00D0, lsl 16
+	bl rectangulo
+
+	mov x1, 40
+	mov x2, 7
+	add x3, x15, 10
+	sub x4, x16, 7
+	movz w10, 0xD0D0, lsl 0
+	movk w10, 0x00D0, lsl 16
+	bl rectangulo
+
+	mov x1, 15
+	mov x2, 8
+	add x3, x15, 20
+	sub x4, x16, 12 
+        movz w10, 0xD0D0, lsl 0
+        movk w10, 0x00D0, lsl 16
+        bl rectangulo
+        
+       ldr x30, [sp, 0]
+       add sp, sp, 8
+
+	ret

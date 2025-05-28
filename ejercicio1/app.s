@@ -190,6 +190,236 @@ bl rectangulo
 
 bl dibujar_podio
 
+// --- ODC 2025 --
+
+// -- O --
+movz w10, 0x0000, lsl 0
+movk w10, 0x0000, lsl 16
+
+// -- LINEA SUPERIOR  --
+movz x1, 8, lsl 0
+movz x2, 2, lsl 0
+movz x3, 188, lsl 0
+movz x4, 365, lsl 0
+bl rectangulo
+
+// -- LINEA IZQUIERDA -- 
+movz x1, 2, lsl 0
+movz x2, 24, lsl 0
+movz x3, 194, lsl 0
+movz x4, 365, lsl 0
+bl rectangulo
+
+// --- LINEA INFERIOR ---
+movz x1, 8, lsl 0
+movz x2, 2, lsl 0
+movz x3, 188, lsl 0
+movz x4, 389, lsl 0
+bl rectangulo
+
+// -- LINEA DERECHA --
+movz x1, 2, lsl 0
+movz x2, 24, lsl 0
+movz x3, 188, lsl 0
+movz x4, 365, lsl 0
+bl rectangulo
+
+// -- D -- 
+
+// -- LINEA IZQUIERDA --
+movz x1, 2, lsl 0
+movz x2, 26, lsl 0
+movz x3, 204, lsl 0
+movz x4, 365, lsl 0
+bl rectangulo
+
+// --- LINEA SUPERIOR ---
+movz x1, 7, lsl 0
+movz x2, 2, lsl 0
+movz x3, 206, lsl 0
+movz x4, 365, lsl 0
+bl rectangulo
+
+// --- LINEA INFERIOR ---
+movz x1, 7, lsl 0
+movz x2, 2, lsl 0
+movz x3, 206, lsl 0
+movz x4, 389, lsl 0
+bl rectangulo
+
+// -- LINEA DERECHA --
+movz x1, 2, lsl 0
+movz x2, 23, lsl 0
+movz x3, 212, lsl 0
+movz x4, 366, lsl 0
+bl rectangulo
+
+// -- C -- 
+
+// --- LINEA IZQUIERDA ---
+movz x1, 2, lsl 0
+movz x2, 25, lsl 0
+movz x3, 222, lsl 0
+movz x4, 366, lsl 0
+bl rectangulo
+
+// --- LINEA SUPERIOR ---
+movz x1, 7, lsl 0
+movz x2, 2, lsl 0
+movz x3, 224, lsl 0
+movz x4, 366, lsl 0
+bl rectangulo
+
+// --- LINEA INFERIOR ---
+movz x1, 7, lsl 0
+movz x2, 2, lsl 0
+movz x3, 224, lsl 0
+movz x4, 389, lsl 0
+bl rectangulo
+
+
+// --- 2 ----
+
+// --- LÍNEA SUPERIOR ---
+movz x1, 20, lsl 0        
+movz x2, 2, lsl 0        
+movz x3, 257, lsl 0       
+movz x4, 366, lsl 0      
+bl rectangulo
+
+// --- LINEA DERECHA SUPERIOR  ---
+movz x1, 2, lsl 0
+movz x2, 10, lsl 0
+movz x3, 275, lsl 0     
+movz x4, 367, lsl 0
+bl rectangulo
+
+// --- LÍNEA MEDIA ---
+movz x1, 20, lsl 0
+movz x2, 2, lsl 0
+movz x3, 257, lsl 0
+movz x4, 377, lsl 0
+bl rectangulo
+
+// --- LINEA DERECHA IZQUIERDA ---
+movz x1, 2, lsl 0
+movz x2, 10, lsl 0
+movz x3, 257, lsl 0
+movz x4, 379, lsl 0
+bl rectangulo
+
+// --- LÍNEA INFERIOR ---
+movz x1, 20, lsl 0
+movz x2, 2, lsl 0
+movz x3, 257, lsl 0
+movz x4, 389, lsl 0
+bl rectangulo
+
+// --- 0 ---
+
+// --- LÍNEA SUPERIOR ---
+movz x1, 20, lsl 0
+movz x2, 2, lsl 0
+movz x3, 287, lsl 0      
+movz x4, 366, lsl 0
+bl rectangulo
+
+// --- LADO IZQUIERDO ---
+movz x1, 2, lsl 0
+movz x2, 22, lsl 0     
+movz x3, 287, lsl 0
+movz x4, 367, lsl 0
+bl rectangulo
+
+// --- LADO DERECHO ---
+movz x1, 2, lsl 0
+movz x2, 22, lsl 0
+movz x3, 305, lsl 0
+movz x4, 367, lsl 0
+bl rectangulo
+
+// --- LÍNEA INFERIOR ---
+movz x1, 20, lsl 0
+movz x2, 2, lsl 0
+movz x3, 287, lsl 0
+movz x4, 389, lsl 0
+bl rectangulo
+
+// --- 2 ---
+
+// --- LÍNEA SUPERIOR ---
+movz x1, 20, lsl 0
+movz x2, 2, lsl 0
+movz x3, 317, lsl 0
+movz x4, 366, lsl 0
+bl rectangulo
+
+// --- LINEA DERECHA SUPERIOR  ---
+movz x1, 2, lsl 0
+movz x2, 10, lsl 0
+movz x3, 335, lsl 0
+movz x4, 367, lsl 0
+bl rectangulo
+
+// --- LÍNEA MEDIA ---
+movz x1, 20, lsl 0
+movz x2, 2, lsl 0
+movz x3, 317, lsl 0
+movz x4, 377, lsl 0
+bl rectangulo
+
+// --- LINEA DERECHA IZQUIERDA ---
+movz x1, 2, lsl 0
+movz x2, 10, lsl 0
+movz x3, 317, lsl 0
+movz x4, 379, lsl 0
+bl rectangulo
+
+// --- LÍNEA INFERIOR ---
+movz x1, 20, lsl 0
+movz x2, 2, lsl 0
+movz x3, 317, lsl 0
+movz x4, 389, lsl 0
+bl rectangulo
+
+// --- 5 ---
+
+// --- LÍNEA SUPERIOR ---
+movz x1, 20, lsl 0
+movz x2, 2, lsl 0
+movz x3, 347, lsl 0       
+movz x4, 366, lsl 0
+bl rectangulo
+
+// --- LINEA IZQUIERDA ---
+movz x1, 2, lsl 0
+movz x2, 10, lsl 0
+movz x3, 347, lsl 0
+movz x4, 367, lsl 0
+bl rectangulo
+
+// --- LÍNEA MEDIA ---
+movz x1, 20, lsl 0
+movz x2, 2, lsl 0
+movz x3, 347, lsl 0
+movz x4, 377, lsl 0
+bl rectangulo
+
+// --- LINEA DERECHA ---
+movz x1, 2, lsl 0
+movz x2, 10, lsl 0
+movz x3, 365, lsl 0      
+movz x4, 379, lsl 0
+bl rectangulo
+
+// --- LÍNEA INFERIOR ---
+movz x1, 20, lsl 0
+movz x2, 2, lsl 0
+movz x3, 347, lsl 0
+movz x4, 389, lsl 0
+bl rectangulo
+
+
 // ------- PALO --
 movz x1, 8, lsl 0        // ancho
 movz x2, 135, lsl 0         // altura
@@ -215,156 +445,34 @@ movz x1, 100, lsl 0
 movz x2, 45, lsl 0
 movz x3, 258,lsl 0
 movz x4, 185,lsl 0
-MOVZ w10, 0xC3F7, lsl 0           // bits 0–15
-MOVK w10, 0x004F, lsl 16  // bits 16–23
+MOVZ w10, 0xC3F7, lsl 0           
+MOVK w10, 0x004F, lsl 16
 bl rectangulo
 
 movz x1, 100,lsl 0
 movz x2, 15, lsl 0
 movz x3, 258,lsl 0
 movz x4, 200,lsl 0
-movz w10, 0xFFFF, lsl 0           // bits 0–15
-movk w10, 0x00FF, lsl 16  // bits 16–23
+movz w10, 0xFFFF, lsl 0 
+movk w10, 0x00FF, lsl 16  
 bl rectangulo
 
 movz x1, 9,lsl 0
 movz x2, 9,lsl 0
 movz x3, 302,lsl 0
 movz x4, 203,lsl 0
-MOVZ w10, 0xFF99, lsl 0           // bits 0–15
-MOVK w10, 0x00FF, lsl 16  // bits 16–23
+MOVZ w10, 0xFF99, lsl 0   
+MOVK w10, 0x00FF, lsl 16  
 bl rectangulo
 
 
-// ---------- COPA ----------
-//CENTRO de la copa (los niveles van de dentro hacia afuera)
-//Centro cuadrado Nivel 1
-movz x1, 30, lsl 0        // ancho
-movz x2, 30, lsl 0         // altura
-movz x3, 300, lsl 0          // x inicial
-movz x4, 243, lsl 0        // y inicial
-movz w10, 0xA520, lsl 0    // color
-movk w10, 0x00DA, lsl 16
-bl rectangulo
+// --- NUBE ----
 
-//Centro menos ancho nivel 2
-movz x1, 22, lsl 0        // ancho
-movz x2, 38, lsl 0         // altura
-movz x3, 304, lsl 0          // x inicial
-movz x4, 240, lsl 0        // y inicial
-movz w10, 0xA520, lsl 0    // color verde oscuro
-movk w10, 0x00DA, lsl 16
-bl rectangulo
+//X15 Y X16 para las posiciones de las mismas. son los parametrs que toma dibujar nube.
+movz x15, 150, lsl 0
+movz x16, 42, lsl 0
+bl dibujar_nube
 
-//Centro mas ancho nivel 3
-movz x1, 38, lsl 0        // ancho
-movz x2, 20, lsl 0         // altura
-movz x3, 296, lsl 0          // x inicial
-movz x4, 248, lsl 0        // y inicial
-movz w10, 0xA520, lsl 0    // color
-movk w10, 0x00DA, lsl 16
-bl rectangulo
-
-//Centro Brillo
-movz x1, 6, lsl 0        // ancho
-movz x2, 4, lsl 0         // altura
-movz x3, 322, lsl 0          // x inicial
-movz x4, 250, lsl 0        // y inicial
-movz w10, 0xE680, lsl 0    // color dorado claro (brillo)
-movk w10, 0x00FF, lsl 16
-bl rectangulo
-
-//Centro mas fino
-movz x1, 14, lsl 0        // ancho
-movz x2, 16, lsl 0         // altura
-movz x3, 308, lsl 0          // x inicial
-movz x4, 269, lsl 0        // y inicial
-movz w10, 0xA520, lsl 0    // color
-movk w10, 0x00DA, lsl 16
-bl rectangulo
-
-//TRONCO de la copa
-//Tronco mas fino
-movz x1, 10, lsl 0        // ancho
-movz x2, 70, lsl 0         // altura
-movz x3, 310, lsl 0          // x inicial
-movz x4, 240, lsl 0        // y inicial
-movz w10, 0xA520, lsl 0    // color
-movk w10, 0x00DA, lsl 16
-bl rectangulo
-
-//Tronco de mas abajo
-movz x1, 18, lsl 0        // ancho
-movz x2, 8, lsl 0         // altura
-movz x3, 306, lsl 0          // x inicial
-movz x4, 295, lsl 0        // y inicial
-movz w10, 0xA520, lsl 0    // color
-movk w10, 0x00DA, lsl 16
-bl rectangulo
-
-
-//BASE de la copa
-//Mas arriba verde
-movz x1, 24, lsl 0        // ancho
-movz x2, 4, lsl 0         // altura
-movz x3, 303, lsl 0          // x inicial
-movz x4, 303, lsl 0        // y inicial
-movz w10, 0x5000, lsl 0    // color verde oscuro
-movk w10, 0x0000, lsl 16
-bl rectangulo
-
-//Medio
-movz x1, 28, lsl 0        // ancho
-movz x2, 4, lsl 0         // altura
-movz x3, 301, lsl 0          // x inicial
-movz x4, 307, lsl 0        // y inicial
-movz w10, 0xA520, lsl 0    // color dorado
-movk w10, 0x00DA, lsl 16
-bl rectangulo
-
-//Abajo verde
-movz x1, 32, lsl 0        // ancho
-movz x2, 5, lsl 0         // altura
-movz x3, 299, lsl 0          // x inicial
-movz x4, 311, lsl 0        // y inicial
-movz w10, 0x5000, lsl 0    // color verde oscuro
-movk w10, 0x0000, lsl 16
-bl rectangulo
-
-
-
-
-
-//------- NUBES ----------
-// x1 = ancho
-// x2 = alto 
-// x3, x4 = x , y
-
-
-
-movz x1, 60, lsl 0
-movz x2, 10, lsl 0
-movz x3, 150,lsl 0
-movz x4, 42, lsl 0
-movz w10, 0xD0D0, lsl 0    // Mueve los 16 bits bajos
-movk w10, 0x00D0, lsl 16   // Mueve los 8 bits altos (rellena los bits 16–23)
-bl rectangulo
-
-movz x1, 40, lsl 0
-movz x2, 7, lsl 0
-movz x3, 160,lsl 0
-movz x4, 35, lsl 0
-movz w10, 0xD0D0, lsl 0    // Mueve los 16 bits bajos
-movk w10, 0x00D0, lsl 16   // Mueve los 8 bits altos (rellena los bits 16–23)
-bl rectangulo
-
-movz x1, 15, lsl 0
-movz x2, 8, lsl 0
-movz x3, 170,lsl 0
-movz x4, 30, lsl 0
-movz w10, 0xD0D0, lsl 0    // Mueve los 16 bits bajos
-movk w10, 0x00D0, lsl 16   // Mueve los 8 bits altos (rellena los bits 16–23)
-bl rectangulo
 
 
 //NUBE 2: (desplazado a la derecha en el eje x + 100px, y el eje y + 50px)
@@ -521,6 +629,108 @@ movz x4, 197, lsl 0
 movz w10, 0xD0D0, lsl 0
 movk w10, 0x00D0, lsl 16
 bl rectangulo
+
+
+
+// ---------- COPA ----------
+//CENTRO de la copa (los niveles van de dentro hacia afuera)
+//Centro cuadrado Nivel 1
+movz x1, 30, lsl 0        // ancho
+movz x2, 30, lsl 0         // altura
+movz x3, 300, lsl 0          // x inicial
+movz x4, 243, lsl 0        // y inicial
+movz w10, 0xA520, lsl 0    // color
+movk w10, 0x00DA, lsl 16
+bl rectangulo
+
+//Centro menos ancho nivel 2
+movz x1, 22, lsl 0        // ancho
+movz x2, 38, lsl 0         // altura
+movz x3, 304, lsl 0          // x inicial
+movz x4, 240, lsl 0        // y inicial
+movz w10, 0xA520, lsl 0    // color verde oscuro
+movk w10, 0x00DA, lsl 16
+bl rectangulo
+
+//Centro mas ancho nivel 3
+movz x1, 38, lsl 0        // ancho
+movz x2, 20, lsl 0         // altura
+movz x3, 296, lsl 0          // x inicial
+movz x4, 248, lsl 0        // y inicial
+movz w10, 0xA520, lsl 0    // color
+movk w10, 0x00DA, lsl 16
+bl rectangulo
+
+//Centro Brillo
+movz x1, 6, lsl 0        // ancho
+movz x2, 4, lsl 0         // altura
+movz x3, 322, lsl 0          // x inicial
+movz x4, 250, lsl 0        // y inicial
+movz w10, 0xE680, lsl 0    // color dorado claro (brillo)
+movk w10, 0x00FF, lsl 16
+bl rectangulo
+
+//Centro mas fino
+movz x1, 14, lsl 0        // ancho
+movz x2, 16, lsl 0         // altura
+movz x3, 308, lsl 0          // x inicial
+movz x4, 269, lsl 0        // y inicial
+movz w10, 0xA520, lsl 0    // color
+movk w10, 0x00DA, lsl 16
+bl rectangulo
+
+//TRONCO de la copa
+//Tronco mas fino
+movz x1, 10, lsl 0        // ancho
+movz x2, 70, lsl 0         // altura
+movz x3, 310, lsl 0          // x inicial
+movz x4, 240, lsl 0        // y inicial
+movz w10, 0xA520, lsl 0    // color
+movk w10, 0x00DA, lsl 16
+bl rectangulo
+
+//Tronco de mas abajo
+movz x1, 18, lsl 0        // ancho
+movz x2, 8, lsl 0         // altura
+movz x3, 306, lsl 0          // x inicial
+movz x4, 295, lsl 0        // y inicial
+movz w10, 0xA520, lsl 0    // color
+movk w10, 0x00DA, lsl 16
+bl rectangulo
+
+
+//BASE de la copa
+//Mas arriba verde
+movz x1, 24, lsl 0        // ancho
+movz x2, 4, lsl 0         // altura
+movz x3, 303, lsl 0          // x inicial
+movz x4, 303, lsl 0        // y inicial
+movz w10, 0x5000, lsl 0    // color verde oscuro
+movk w10, 0x0000, lsl 16
+bl rectangulo
+
+//Medio
+movz x1, 28, lsl 0        // ancho
+movz x2, 4, lsl 0         // altura
+movz x3, 301, lsl 0          // x inicial
+movz x4, 307, lsl 0        // y inicial
+movz w10, 0xA520, lsl 0    // color dorado
+movk w10, 0x00DA, lsl 16
+bl rectangulo
+
+//Abajo verde
+movz x1, 32, lsl 0        // ancho
+movz x2, 5, lsl 0         // altura
+movz x3, 299, lsl 0          // x inicial
+movz x4, 311, lsl 0        // y inicial
+movz w10, 0x5000, lsl 0    // color verde oscuro
+movk w10, 0x0000, lsl 16
+bl rectangulo
+
+
+
+
+
 
 
 	//---------------------------------------------------------------
