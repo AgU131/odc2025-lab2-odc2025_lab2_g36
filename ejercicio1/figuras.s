@@ -190,7 +190,6 @@ stur x30, [sp, 0]
 
 ldr x30, [sp, 0]
 add sp, sp, 8
-
     ret
 
 
@@ -228,3 +227,4 @@ dibujar_nube:
        add sp, sp, 8
 
 	ret
+
