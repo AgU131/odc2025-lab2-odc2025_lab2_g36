@@ -214,6 +214,33 @@ MOVZ w10, 0xFF99, lsl 0           // bits 0–15
 MOVK w10, 0x00FF, lsl 16  // bits 16–23
 bl rectangulo
 
+//-----BANDERA FRANCIA------
+
+movz x1 , 26 ,lsl 0
+movz x2 , 45 ,lsl 0
+movz x3 , 180, lsl 0
+movz x4 , 218, lsl 0
+MOVZ w10, 0x55A4, lsl 0    // Color azul
+MOVK w10, 0x0000, lsl 16  // 
+bl rectangulo
+
+movz x1 , 26 ,lsl 0
+movz x2 , 45 ,lsl 0
+movz x3 , 206, lsl 0
+movz x4 , 218, lsl 0
+MOVZ w10, 0xFFFF, lsl 0
+MOVK w10, 0x00FF, lsl 16 // Color Blanco 
+bl rectangulo
+
+movz x1 , 26 ,lsl 0
+movz x2 , 45 ,lsl 0
+movz x3 , 232, lsl 0
+movz x4 , 218, lsl 0
+MOVZ w10, 0x4135, lsl 0    // Color Rojo
+MOVK w10, 0x00EF, lsl 16  //  
+bl rectangulo
+
+
 //---- COPA ---
 movz x15, 300, lsl 0          // x inicial
 movz x16, 240, lsl 0        // y inicial
