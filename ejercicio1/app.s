@@ -14,7 +14,7 @@ main:
 	// x0 contiene la direccion base del framebuffer
  	mov x20, x0	// Guarda la dirección base del framebuffer en x20
 	//---------------- CODE HERE ------------------------------------
-
+/* ESTO PARA QUE PINTE EL FUCSIA lo saco por el momento.
 	movz x10, 0xC7, lsl 16
 	movk x10, 0x1585, lsl 00
 
@@ -28,7 +28,7 @@ loop0:
 	cbnz x1,loop0  // Si no terminó la fila, salto
 	sub x2,x2,1	   // Decrementar contador Y
 	cbnz x2,loop1  // Si no es la última fila, salto
-
+*/
 	// Ejemplo de uso de gpios
 	mov x9, GPIO_BASE
 
@@ -48,7 +48,7 @@ loop0:
 	// efectivamente, su valor representará si GPIO 2 está activo
 	lsr w11, w11, 1
         
-
+/* ANTERIOR FONDO
 // --------- FONDO CELESTE
 movz x1, 640, lsl 0        // ancho 
 movz x2, 400, lsl 0        // altura
@@ -56,6 +56,69 @@ movz x3, 0, lsl 0          // x inicial
 movz x4, 0, lsl 0          // y inicial
 movz w10, 0xFFFF, lsl 0    // color cielo
 bl rectangulo              // llama a la función
+*/
+       
+
+//---------------FONDO AMANECER-----------
+// cargar divisor 255 en x30 (una sola vez)
+mov x30, 255
+
+mov x0, x20 // se restaura el puntero del framebuffer
+mov x2, SCREEN_HEIGH
+mov x9, SCREEN_HEIGH
+
+fondo_loop_y:
+    mov x3, x9
+    sub x3, x3, x2
+    mul x3, x3, x30
+    udiv x3, x3, x9      // x3 = interpolación (0–255)
+
+    // En x11 se guarda el top
+    // en x12 se guarda el bottom	
+    // === Canal R (189 → 50) ===
+    mov x11, 255
+    mov x12, 60
+    sub x13, x12, x11
+    mul x14, x3, x13
+    udiv x14, x14, x30
+    add x21, x11, x14    // x21 = R
+
+    // === Canal G (203 → 80) ===
+    mov x15, 180
+    mov x16, 80
+    sub x17, x16, x15
+    mul x18, x3, x17
+    udiv x18, x18, x30
+    add x22, x15, x18    // x22 = G
+
+    // === Canal B (243 → 150) ===
+    mov x19, 100
+    mov x23, 150
+    sub x24, x19, x23
+    mul x25, x3, x24
+    udiv x25, x25, x30
+    sub x23, x19, x25    // x23 = B (usamos x23 de nuevo)
+
+    // construir color RGBA en x8
+    mov x8, x23           // B
+    lsl x8, x8, 8
+    orr x8, x8, x22       // G
+    lsl x8, x8, 8
+    orr x8, x8, x21       // R
+    lsl x8, x8, 8
+    orr x8, x8, 0xFF      // A
+
+    mov w10, w8
+
+    mov x1, SCREEN_WIDTH
+fondo_loop_x:
+    stur w10, [x0]
+    add x0, x0, 4
+    sub x1, x1, 1
+    cbnz x1, fondo_loop_x
+
+    sub x2, x2, 1
+    cbnz x2, fondo_loop_y
 
 // --------- PASTO VERDE CLARO --
 movz x1, 640, lsl 0        // ancho 
