@@ -166,7 +166,7 @@ continuar_copa:
     bl dibujar_copa
 
     // --- Delay (se pueden editar las constantes para cambiar el tiempo de delay y la velocidad) ---
-    movz x27, 150, lsl 0
+    movz x27, 170, lsl 0
     delay_externo:
         movz x28, 50000, lsl 0
     delay_interno:
