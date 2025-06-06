@@ -12,8 +12,12 @@ Descripción ejercicio 2:
 
 
 Justificación instrucciones ARMv8:
+uDIV:
 En el ejericio 1 utilizamos UDIV (Unsigned DIVide) para lograr un fondo de amanecer.
 Este en particular está calculando la proporción de avance de cada fila en la pantalla (desde 0 en la parte superior hasta 255 en la parte inferior).
 En el codigo x3 despues del uDIV contiene un valor entre 0 y 255, que indica qué tan abajo estás en la pantalla. Osea basicamente convierte la posición vertical (Y) en un valor entre 0 y 255 para despues poder calcular colores intermedios y lograr un buen degradé.
+
+MUL:
+Utilizamos mul para multiplicar entre registros, y no el LSL ya que es mas eficiente el LSL para multiplicar por potencias de 2.
 
 
