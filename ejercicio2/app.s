@@ -70,12 +70,12 @@ bucle_animacion:
 
 
     // --- Empezamos a dibujar las nubes (las movemos de posicion con add o sub) ---
-    // --- Además en cada iteración, comparamos x17 (X de cada nube) con 640 para ver si llego al final de la pantalla, en caso de no haber llegado, dibuja la nube en la                   posición que haya en x17, en caso de haber llegado a 640, le restamos 700 a x17, para que la nube vuelva a aparecer por la izquierda de la pantalla. (el 700 es editable, consideramos que en 700 quedaba bien)
+    // --- Además en cada iteración, comparamos x17 (X de cada nube) con 640 para ver si llego al final de la pantalla, en caso de no haber llegado, dibuja la nube en la                   posición que haya en x17, en caso de haber llegado a 640, le restamos 640 a x17, para que la nube vuelva a aparecer por la izquierda de la pantalla. (el 640 es editable, consideramos que en 640 quedaba bien)
 
     // --- Nube 1  ---
     cmp x17, 640
     b.lt nube1_dibujar
-    sub x17, x17, 700
+    sub x17, x17, 640
 nube1_dibujar:
     bl dibujar_nube
 
@@ -84,7 +84,7 @@ nube1_dibujar:
     add x18, x18, 80
     cmp x17, 640
     b.lt nube2_dibujar   
-    sub x17, x17, 700
+    sub x17, x17, 640
 nube2_dibujar:
     bl dibujar_nube
 
@@ -93,7 +93,7 @@ nube2_dibujar:
     sub x18, x18, 50
     cmp x17, 640
     b.lt nube3_dibujar
-    sub x17, x17, 700
+    sub x17, x17, 640
 nube3_dibujar:
     bl dibujar_nube
 
@@ -102,7 +102,7 @@ nube3_dibujar:
     add x18, x18, 50
     cmp x17, 640
     b.lt nube4_dibujar
-    sub x17, x17, 700
+    sub x17, x17, 640
 nube4_dibujar:
     bl dibujar_nube
 
@@ -110,7 +110,7 @@ nube4_dibujar:
     add x17, x17, 450
     cmp x17, 640
     b.lt nube5_dibujar
-    sub x17, x17, 700
+    sub x17, x17, 640
 nube5_dibujar:
     bl dibujar_nube
 
@@ -119,7 +119,7 @@ nube5_dibujar:
     add x18, x18, 93
     cmp x17, 640
     b.lt nube6_dibujar
-    sub x17, x17, 700
+    sub x17, x17, 640
 nube6_dibujar:
     bl dibujar_nube
 
@@ -128,7 +128,7 @@ nube6_dibujar:
     add x18, x18, 25
     cmp x17, 640
     b.lt nube7_dibujar
-    sub x17, x17, 700
+    sub x17, x17, 640
 nube7_dibujar:
     bl dibujar_nube
 
@@ -137,7 +137,7 @@ nube7_dibujar:
     sub x18, x18, 38
     cmp x17, 640
     b.lt nube8_dibujar
-    sub x17, x17, 700
+    sub x17, x17, 640
 nube8_dibujar:
     bl dibujar_nube
 
