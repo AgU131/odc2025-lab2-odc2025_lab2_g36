@@ -57,8 +57,6 @@ movz x16, 240, lsl 0        // y inicial
 bl dibujar_copa
 
 //------- NUBES (nada mas movemos los x e y en donde queremos que esten las nubes)----------
-// x1 = ancho
-// x2 = alto 
 // x15, x16 = x , y
 
     movz x15, 150, lsl 0
